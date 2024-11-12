@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Bot Deployment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>WhatsApp Bot Deployment Hub</h1>
+      <p>Deploy your WhatsApp bot in just a few steps! Enter your bot repository and we’ll handle the rest.</p>
+    </header>
+
+    <main>
+      <form id="deploy-form">
+        <label for="repo-link">Enter Bot Repository Link:</label>
+        <input 
+          type="url" 
+          id="repo-link" 
+          placeholder="https://github.com/username/your-bot-repo"
+          required
+        >
+        <button type="submit" id="deploy-button">Deploy Bot</button>
+      </form>
+
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p>Deploying your bot, please wait...</p>
+      </div>
+
+      <div id="success-message" class="hidden">
+        <h2>✅ Deployment Successful!</h2>
+        <p>Your bot has been deployed and is now live. Use the session ID below to connect:</p>
+        <code id="session-id">Loading...</code>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 WhatsApp Bot Deployment Hub. Powered by GitHub Pages.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
